@@ -8,7 +8,7 @@ aside {
     flex-direction: column;
     gap: 16px;
     width: 250px;
-    height: 100vh;
+    height: auto;
     background-color: #1a1a1a;
     padding-inline: 24px;
     padding-top: 16px;
@@ -104,6 +104,12 @@ header {
     font-weight: bold;
 }
 
+@media screen and (max-width: 640px) {
+    .add-btn span {
+        display: none;
+    }
+}
+
 
 .card-section {
     width: 100%;
@@ -116,6 +122,11 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 24px;
 }
+
+/* .card-list {
+    columns: 300px;
+    column-gap: 24px;
+} */
 
 .card-section ul li {
     display: flex;
@@ -148,12 +159,20 @@ header {
 .language-label {
     display: flex;
     align-items: center;
-    color: rgb(40, 68, 140);
     font-size: 12px;
     line-height: 100%;
-    background-color: rgb(173, 191, 237);
     padding: 3px 10px;
     border-radius: 16px;
+}
+
+.lang-css {
+    background-color: rgb(173, 191, 237);
+    color: rgb(40, 68, 140);
+}
+
+.lang-html {
+    background-color: #e34c26;
+    color: white;
 }
 
 pre {
